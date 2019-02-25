@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/lang_en"
+        android:title="@string/lang_en"/>
+    <item
+        android:id="@+id/lang_sw"
+        android:title="@string/lang_sw"/>
+
+    <item
+        android:id="@+id/about"
+        android:title="About Us"/>
+
+    <item
+        android:id="@+id/license"
+        android:title="Subscription"/>
+
+    <item
+        android:id="@+id/activate"
+        android:title="Activate"/>
+
+    <item
+        android:id="@+id/btnSignOut"
+        android:title="Sign Out"/>
+
+
+</menu>

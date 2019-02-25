@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/detailTab"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:layout_margin="10dp">
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_above="@+id/bottomButtonContainer">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="70dp"
+				android:orientation="horizontal">
+
+				<EditText
+					android:id="@+id/productNameEditText"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_toLeftOf="@+id/btnProductModify"
+					android:focusable="false"
+					android:focusableInTouchMode="false"
+					android:gravity="left|center_vertical"
+					android:inputType="textNoSuggestions"
+					android:padding="10dp"
+					android:text="@string/name"
+					android:textAllCaps="true"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:textColor="#000000"
+					android:textSize="30sp"
+					android:textStyle="bold" />
+
+				<Button
+					android:id="@+id/btnProductModify"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:background="@drawable/edit"
+					android:onClick="OnProductDetailEditBtnClicked"/>
+
+
+			</RelativeLayout>
+
+			<TextView
+				android:id="@+id/labelCost"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:padding="2dip"
+				android:text="@string/costPrice"
+				android:textSize="14sp" />
+
+			<EditText
+				android:id="@+id/productCostEditText"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="#eee"
+				android:focusable="false"
+				android:focusableInTouchMode="false"
+				android:gravity="left"
+				android:inputType="number"
+				android:padding="2dip"
+				android:textSize="18sp" />
+
+			<TextView
+				android:id="@+id/labelPrice"
+				android:layout_width="match_parent"
+
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:text="@string/sale_price"
+				android:textSize="14sp" />
+
+			<EditText
+				android:id="@+id/productPriceEditText"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="#eee"
+				android:ems="20"
+				android:focusable="false"
+				android:gravity="left"
+				android:inputType="numberDecimal"
+				android:textSize="18sp" />
+
+			<TextView
+				android:id="@+id/labelCategory"
+				android:layout_width="match_parent"
+
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:text="@string/category"
+				android:textSize="14sp" />
+
+			<EditText
+				android:id="@+id/productCategoryEditText"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="#eee"
+				android:ems="20"
+				android:focusable="false"
+				android:focusableInTouchMode="false"
+				android:inputType="text"
+				android:textSize="18sp" />
+
+			<TextView
+				android:id="@+id/labelUnit"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+
+				android:layout_marginTop="10dp"
+				android:focusableInTouchMode="false"
+				android:text="@string/units"
+				android:textSize="14sp" />
+
+			<EditText
+				android:id="@+id/productUnitEditText"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="#eee"
+				android:ems="20"
+				android:focusable="false"
+				android:gravity="left"
+				android:inputType="text"
+				android:textSize="18sp" />
+
+			<TextView
+				android:id="@+id/labelBarcode"
+				android:layout_width="match_parent"
+
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:padding="2dip"
+				android:text="@string/barcode"
+				android:textSize="14sp" />
+
+			<EditText
+				android:id="@+id/productBarcodeEditText"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="#eee"
+				android:focusable="false"
+				android:focusableInTouchMode="false"
+				android:gravity="left"
+				android:inputType="number"
+				android:padding="2dip"
+				android:textColor="#000000"
+				android:textSize="18sp" />
+
+			<ImageView
+				android:id="@+id/productImageView"
+				android:layout_width="122dp"
+				android:layout_height="101dp"
+				android:layout_gravity="center"
+				android:layout_marginTop="8dp"
+				android:background="@drawable/picture"
+				tools:ignore="ContentDescription"
+				android:onClick="OnProductDetailImageBtnClicked"/>
+
+		</LinearLayout>
+
+	</ScrollView>
+
+	<LinearLayout
+		android:id="@+id/bottomButtonContainer"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_alignParentBottom="true"
+		android:orientation="horizontal"
+		android:weightSum="3"
+		android:visibility="gone">
+
+		<Button
+			android:id="@+id/DeleteButton"
+			style="@style/ButtonText"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@drawable/btn_red"
+			android:text="@string/delete"
+			android:onClick="OnProductDetailDeleteBtnClicked"/>
+
+		<Button
+			android:id="@+id/cancelEditButton"
+			style="@style/ButtonText"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@drawable/btn_yellow"
+			android:text="@string/cancel"
+			android:onClick="OnProductDetailCancelBtnClicked"/>
+
+		<Button
+			android:id="@+id/submitEditButton"
+			style="@style/ButtonText"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@drawable/btn_green"
+			android:text="@string/save"
+			android:onClick="OnProductDetailSaveBtnClicked"/>
+
+	</LinearLayout>
+
+</RelativeLayout>

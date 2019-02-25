@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/stockTab"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="5dp"
+	android:orientation="vertical" >
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_above="@+id/addProductLotButton"
+		android:layout_marginBottom="10dp"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp">
+
+			<Spinner
+				android:id="@+id/spinnerSort"
+				android:layout_width="0dip"
+				android:layout_height="match_parent"
+				android:layout_weight="0.3" />
+
+			<Button
+				android:id="@+id/btnPrevious"
+				style="@style/ButtonText"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/btn_yellow"
+				android:text="@string/previous"
+				android:textSize="18sp"
+				android:textStyle="bold"
+				android:onClick="OnPrevTimeBtnClicked"/>
+
+			<TextView
+				android:id="@+id/currentTimeTextView"
+				android:layout_width="0dip"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.5"
+				android:gravity="center"
+				android:textSize="16sp"
+				android:textStyle="normal"
+				android:onClick="OnCurrentTimeTextViewClicked"/>
+
+			<Button
+				android:id="@+id/btnNext"
+				style="@style/ButtonText"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/btn_yellow"
+				android:text="@string/next"
+				android:textSize="18sp"
+				android:textStyle="bold"
+				android:onClick="OnNextTimeBtnClicked"/>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:baselineAligned="false"
+			android:orientation="horizontal">
+
+			<TableRow
+				android:layout_width="0dp"
+				android:layout_height="30dp"
+				android:layout_weight="0.4"
+				android:background="#FFFFFF"
+				android:paddingLeft="1dip"
+				android:paddingTop="1dip"
+				android:paddingBottom="1dip">
+
+				<TextView
+					android:id="@+id/dateAddedTextView"
+					android:layout_width="0dp"
+					android:layout_height="fill_parent"
+					android:layout_weight="2"
+					android:background="#666"
+					android:gravity="center"
+					android:paddingRight="3dp"
+					android:text="@string/dateAdded"
+					android:textColor="#FFFFFF" />
+			</TableRow>
+
+			<TableRow
+				android:layout_width="0dp"
+				android:layout_height="30dp"
+				android:layout_weight="0.4"
+				android:background="#FFFFFF"
+				android:paddingLeft="1dip"
+				android:paddingTop="1dip"
+				android:paddingBottom="1dip">
+
+				<TextView
+					android:id="@+id/modeTextView"
+					android:layout_width="0dp"
+					android:layout_height="fill_parent"
+					android:layout_weight="1.5"
+					android:background="#666"
+					android:gravity="center"
+					android:paddingRight="3dp"
+					android:text="@string/detail"
+					android:textColor="#FFFFFF" />
+				/>
+			</TableRow>
+
+			<TableRow
+				android:layout_width="0dp"
+				android:layout_height="30dp"
+				android:layout_weight="0.25"
+				android:background="#FFFFFF"
+				android:paddingLeft="1dip"
+				android:paddingTop="1dip"
+				android:paddingBottom="1dip">
+
+				<TextView
+					android:id="@+id/costPriceTextView"
+					android:layout_width="0dp"
+					android:layout_height="fill_parent"
+					android:layout_weight="1.5"
+					android:background="#666"
+					android:gravity="center"
+					android:paddingRight="3dp"
+					android:text="@string/costPrice"
+					android:textColor="#FFFFFF"
+					android:textSize="12sp" />
+			</TableRow>
+
+			<TableRow
+				android:layout_width="0dp"
+				android:layout_height="fill_parent"
+				android:layout_weight="0.25"
+				android:background="#FFFFFF"
+				android:paddingLeft="1dip"
+				android:paddingTop="1dip"
+				android:paddingRight="1dip"
+				android:paddingBottom="1dip">
+
+				<TextView
+					android:id="@+id/quantityTextView"
+					android:layout_width="0dp"
+					android:layout_height="30dp"
+					android:layout_weight="0.75"
+					android:background="#666"
+					android:gravity="center"
+					android:paddingRight="3dp"
+					android:text="@string/quantity"
+					android:textColor="#FFFFFF"
+					android:textSize="12sp" />
+			</TableRow>
+
+			<TableRow
+				android:layout_width="0dp"
+				android:layout_height="fill_parent"
+				android:layout_weight="0.25"
+				android:background="#FFFFFF"
+				android:paddingLeft="1dip"
+				android:paddingTop="1dip"
+				android:paddingRight="1dip"
+				android:paddingBottom="1dip">
+
+				<TextView
+					android:id="@+id/balanceTextView"
+					android:layout_width="0dp"
+					android:layout_height="30dp"
+					android:layout_weight="0.75"
+					android:background="#666"
+					android:gravity="center"
+					android:paddingRight="3dp"
+					android:text="@string/balance"
+					android:textColor="#FFFFFF"
+					android:textSize="12sp" />
+			</TableRow>
+
+		</LinearLayout>
+
+
+		<ListView
+			android:id="@+id/inventoryListView"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginTop="10dp">
+
+		</ListView>
+
+	</LinearLayout>
+
+	<Button
+		android:id="@+id/addProductLotButton"
+		style="@style/ButtonText"
+		android:layout_width="200dp"
+		android:layout_height="40dp"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="10dp"
+		android:background="@drawable/btn_green"
+		android:text="@string/add_stock"
+		android:onClick="OnAddStocksBtnClicked"/>
+
+</RelativeLayout>

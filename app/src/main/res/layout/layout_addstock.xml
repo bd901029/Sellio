@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/addProdutlot_dialog"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="5dp"
+	android:orientation="vertical"
+	tools:context="com.sellio.pos.ui.activity.AddStockActivity">
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/costPrice"
+		android:textSize="20sp" />
+
+	<EditText
+		android:id="@+id/costEditText"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:ems="20"
+		android:inputType="numberDecimal"
+		android:textSize="18sp" />
+
+	<requestFocus />
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/quantity"
+		android:textSize="20sp" />
+
+	<EditText
+		android:id="@+id/quantityEditText"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:ems="20"
+		android:inputType="number"
+		android:textSize="18sp" />
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal" >
+
+		<Button
+			android:id="@+id/btnClear"
+			style="@style/ButtonText"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.5"
+			android:background="@drawable/btn_red"
+			android:text="@string/clear"
+			android:textSize="20sp"/>
+
+		<Button
+			android:id="@+id/btnSave"
+			style="@style/ButtonText"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.5"
+			android:background="@drawable/btn_green"
+			android:text="@string/save"
+			android:textSize="20sp" />
+
+	</LinearLayout>
+
+</LinearLayout>

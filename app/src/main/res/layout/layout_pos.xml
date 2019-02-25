@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/cart"
+	android:orientation="vertical">
+
+	<RelativeLayout
+		android:id="@+id/searchContainer"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:focusable="true"
+		android:focusableInTouchMode="true">
+
+		<EditText
+			android:id="@+id/searchEditText"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginRight="10dp"
+			android:layout_toLeftOf="@+id/btnReset"
+			android:hint="@string/hint_search" />
+
+		<ImageButton
+			android:id="@+id/btnReset"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:src="@android:drawable/ic_delete" />
+
+	</RelativeLayout>
+
+	<GridView
+		android:id="@+id/productGridView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_above="@+id/categoryContainer"
+		android:layout_below="@+id/searchContainer"
+		android:layout_marginStart="10dp"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginEnd="10dp"
+		android:layout_marginRight="10dp"
+		android:layout_marginBottom="10dp"
+		android:numColumns="3"
+		android:stretchMode="columnWidth"
+		android:verticalSpacing="16dp" />
+
+	<HorizontalScrollView
+		android:id="@+id/categoryContainer"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:scrollbars="none">
+
+		<LinearLayout
+			android:id="@+id/categoryButtonContainer"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+		</LinearLayout>
+	</HorizontalScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/searchInventory"
+            android:layout_width="224dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:hint="@string/hint_search"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:baselineAligned="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.6"
+            android:background="#FFFFFF"
+            android:paddingBottom="1dip"
+            android:paddingLeft="1dip"
+            android:paddingTop="1dip" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.5"
+                android:background="#666"
+                android:gravity="center"
+                android:paddingRight="3dp"
+                android:text="@string/item"
+                android:textColor="#FFFFFF"
+                android:textStyle="normal" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.2"
+            android:background="#FFFFFF"
+            android:paddingBottom="1dip"
+            android:paddingLeft="1dip"
+            android:paddingTop="1dip" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.5"
+                android:background="#666"
+                android:gravity="center"
+                android:paddingRight="3dp"
+                android:text="@string/stocks"
+                android:textColor="#FFFFFF"
+                android:textStyle="normal" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.2"
+            android:background="#FFFFFF"
+            android:paddingBottom="1dip"
+            android:paddingLeft="1dip"
+            android:paddingTop="1dip" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.5"
+                android:background="#666"
+                android:gravity="center"
+                android:paddingRight="3dp"
+                android:text="@string/add"
+                android:textColor="#FFFFFF"
+                android:textStyle="normal" />
+        </TableRow>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="4.96"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/inventoryListView"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" >
+        </ListView>
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal" >-->
+
+        <!--<Button-->
+            <!--android:id="@+id/scanButton"-->
+            <!--style="@style/ButtonText"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@drawable/btn_blue"-->
+            <!--android:text="@string/scan" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/searchBox"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:ems="10"-->
+            <!--android:hint="@string/hint_search" />-->
+    <!--</LinearLayout>-->
+
+    <!--<ListView-->
+        <!--android:id="@+id/inventoryListView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dip"-->
+        <!--android:layout_marginLeft="2dp"-->
+        <!--android:layout_marginRight="2dp"-->
+        <!--android:layout_weight="1" >-->
+    <!--</ListView>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/addProductButton"-->
+        <!--style="@style/ButtonText"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/btn_green"-->
+        <!--android:ems="10"-->
+        <!--android:text="@string/add_new_product" />-->
+
+</LinearLayout>

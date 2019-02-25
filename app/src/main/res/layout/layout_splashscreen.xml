@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/refresh_logo_low">
+
+	<LinearLayout
+		android:id="@+id/registration"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:orientation="vertical"
+		android:visibility="invisible">
+
+		<TextView
+			android:id="@+id/titleTextView"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Product Activation"
+			android:textSize="20dp"
+			android:layout_gravity="center_horizontal"/>
+
+		<EditText
+			android:id="@+id/nameTextView"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:hint="Shop Name"
+			android:inputType="text" />
+
+		<EditText
+			android:id="@+id/phonenumber"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:hint="Phone Number"
+			android:inputType="text"
+			android:visibility="visible" />
+
+		<EditText
+			android:id="@+id/voucher"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:ems="10"
+
+			android:hint="Voucher"
+
+
+			android:inputType="text" />
+
+
+		<Button
+			android:id="@+id/btnActivate"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:text="Activate"
+			android:onClick="OnActivateBtnClicked"/>
+
+
+		<TextView
+			android:id="@+id/imei"
+			android:layout_width="200dp"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="5dp"
+			android:text=""
+			android:textColor="#222" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal">
+
+			<TextView
+				android:id="@+id/info"
+				android:layout_width="200dp"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="10dp"
+				android:layout_marginTop="5dp"
+				android:text=""
+				android:textColor="#FFFFFF" />
+
+			<ProgressBar
+				android:id="@+id/progressBar"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="10dp"
+				android:layout_x="164dp"
+				android:layout_y="195dp"
+				android:visibility="invisible" />
+		</LinearLayout>
+
+
+		<Button
+			android:id="@+id/btnLaunch"
+			android:layout_width="150dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="20dp"
+			android:text="Launch Sellio>>"
+			android:textAllCaps="true"
+			android:textSize="12dp"
+			android:visibility="invisible"
+			android:onClick="OnLaunchBtnClicked"/>
+
+		<Button
+			android:id="@+id/btnPurchaseVoucher"
+			android:layout_width="150dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="20dp"
+			android:text="Purchase Voucher"
+			android:textAllCaps="true"
+			android:textSize="12dp"
+			android:onClick="OnPurchaseVoucherBtnClicked"/>
+
+		<Button
+			android:id="@+id/btnContactUs"
+			android:layout_width="150dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="20dp"
+			android:text="Contact Us"
+			android:textAllCaps="true"
+			android:textSize="12dp"
+			android:onClick="OnContactUsBtnClicked"/>
+
+	</LinearLayout>
+
+</RelativeLayout>

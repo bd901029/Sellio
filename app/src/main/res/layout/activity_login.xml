@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".ui.activity.LoginActivity"
+	android:weightSum="14">
+
+	<LinearLayout
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="2">
+
+	</LinearLayout>
+
+	<RelativeLayout
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="10">
+
+		<RelativeLayout
+			android:id="@+id/registration"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:visibility="visible">
+
+
+			<TextView
+				android:id="@+id/titleTextView"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="false"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="20dp"
+				android:text="Manage Your POS"
+				android:textSize="20dp" />
+
+			<EditText
+				android:id="@+id/usernameEditText"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/titleTextView"
+				android:layout_marginTop="20dp"
+				android:ems="10"
+				android:hint="Username or Email Address"
+				android:inputType="textEmailAddress" />
+
+			<EditText
+				android:id="@+id/passwordEditText"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/usernameEditText"
+				android:layout_marginTop="10dp"
+				android:ems="10"
+				android:hint="Password"
+				android:inputType="textVisiblePassword"
+				android:visibility="visible"
+				android:password="true"/>
+
+
+			<Button
+				android:id="@+id/btnLogin"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/passwordEditText"
+				android:layout_marginTop="20dp"
+				android:text="Log In"
+				android:onClick="OnLogInBtnClicked"/>
+
+			<Button
+				android:id="@+id/btnSignup"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/btnLogin"
+				android:layout_marginTop="10dp"
+				android:layout_marginBottom="100dp"
+				android:text="Sign Up"
+				android:onClick="OnSignUpBtnClicked"/>
+
+		</RelativeLayout>
+
+	</RelativeLayout>
+
+	<LinearLayout
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="2">
+
+	</LinearLayout>
+
+
+
+</LinearLayout>

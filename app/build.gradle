@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+
+android {
+	compileSdkVersion 27
+	defaultConfig {
+		applicationId "com.sellio.pos"
+		minSdkVersion 15
+		targetSdkVersion 22
+		versionCode 6
+		versionName "Rosebella 6"
+
+	}
+	buildTypes {
+		release {
+			minifyEnabled false
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+		}
+	}
+	lintOptions {
+		abortOnError false
+		checkReleaseBuilds false
+	}
+	productFlavors {
+	}
+
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_8
+		targetCompatibility JavaVersion.VERSION_1_8
+	}
+}
+
+dependencies {
+	implementation files('libs/achartengine-1.1.0.jar')
+	implementation files('libs/android-integration-2.0-supportv4.jar')
+	implementation 'com.android.volley:volley:1.0.0'
+	implementation 'com.android.support:support-v4:27.0.0'
+	implementation 'com.android.support:gridlayout-v7:27.0.0'
+	implementation 'com.android.support:appcompat-v7:27.1.1'
+	// <= YOU CARE ABOUT THIS
+	//  implementation 'com.android.support:support-v4:27.+'
+	implementation 'cn.pedant.sweetalert:library:1.3'
+	implementation 'com.loopj.android:android-async-http:1.4.9'
+	implementation project(path: ':webview')
+	implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+}

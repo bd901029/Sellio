@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sellio POS</string>
+    <string name="action_settings">Settings</string>
+    <string name="total">Jumla</string>
+    <string name="barcode">Nambari</string>
+    <string name="cancel">Futa</string>
+    <string name="clear">Futa</string>
+    <string name="edit">Badili</string>
+    <string name="save">Hifadhi</string>
+    <string name="detail">Kielelezo</string>
+
+    <string name="date">Tarehe</string>
+    <string name="dateAdded">Tarehe</string>
+    <string name="quantity">Ngapi</string>
+    <string name="remove">Ondoa</string>
+    <string name="scan">Nambari</string>
+    <string name="costPrice">Gharama</string>
+    <string name="unit_price">Bei</string>
+    <string name="profit">Faida</string>
+    <string name="name">Jina</string>
+    <string name="id">ID</string>
+    <string name="cash">Malipo</string>
+    <string name="change">Salio</string>
+    <string name="hint_search">Tafuta</string>
+    <string name="hint_cash">Pesa</string>
+    <string name="add_new_product">Ongeza</string>
+    <string name="add">Ongeza </string>
+
+    <string name="add_stock">Ongeza bidhaa</string>
+    <string name="previous">&#9001;</string>
+    <string name="next">&#9002;</string>
+    <string name="inventory">Mali</string>
+    <string name="sale">Mauzo</string>
+    <string name="report">Ripoti</string>
+    <string name="pos">POS</string>
+    <string name="product">Bidhaa</string>
+    <string name="title">Jina</string>
+    <string name="cost">Gharama</string>
+    <string name="price">Bei</string>
+    <string name="category">Kitengo</string>
+    <string name="sale_price">Bei</string>
+    <string name="product_Image">Picha</string>
+    <string name="item">Bidhaa</string>
+    <string name="stocks">Mali</string>
+    <string name="purchase">Nunus</string>
+    <string name="units">Kipimo</string>
+    <string name="cart">Kikapu</string>
+
+    <string name="dialog_quit">Je unataka Kuondoka kwenye App?</string>
+    <string name="dialog_remove_product">Je unataka Kuondoa hii bidhaa ?</string>
+    <string name="dialog_clear_sale">Je unataka kufuta uzo hili?</string>
+    <string name="hint_empty_sale">Hamna Mauzo.</string>
+    <string name="quit">Ondoka</string>
+    <string name="no">La</string>
+    <string name="product_detail">Maelezo ya Bidhaa</string>
+    <string name="stock">Mali</string>
+    <string name="success">Imefaulu</string>
+    <string name="fail">Tatizo</string>
+    <string name="please_input_all">Jaza Vipengele Vyote.</string>
+    <string name="need_money">Unahitaji</string>
+
+    <string name="lang_en">English</string>
+    <string name="lang_sw">Swahili</string>
+    <string name="lang_jp">日本語 (jp)</string>
+    <string name="hint_lang">Anzisha App ili Kubadilisha Lugha</string>
+
+    <string-array name="period">
+        <item>Siku</item>
+        <item>Wiki</item>
+        <item>Mwezi</item>
+        <item>Mwaka</item>
+    </string-array>
+
+    <style name="ButtonText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <string name="trialMsg">Demo version expired please contact vendor support</string>
+    <string name="expire">EXPIRE</string>
+</resources>

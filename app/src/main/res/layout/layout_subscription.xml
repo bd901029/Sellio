@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sellio.pos.ui.activity.SubscriptionActivity">
+
+
+    <im.delight.android.webview.AdvancedWebView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/web_view"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="164dp"
+            android:layout_y="195dp"
+            tools:visibility="invisible" />
+
+    </im.delight.android.webview.AdvancedWebView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="#009999"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="TextView"
+            android:textColor="#eeeeee"
+            android:textSize="10dp" />
+        <Button
+            android:id="@+id/btnCopyDb"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="Backup Database"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp" />
+        <Button
+            android:id="@+id/btnRestoreDb"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="Restore Database"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp" />
+    </LinearLayout>
+
+
+</RelativeLayout>
