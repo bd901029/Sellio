@@ -10,6 +10,9 @@
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
 	<application
 		android:name=".SellioApplication"
@@ -54,6 +57,9 @@
 			android:name=".ui.activity.AddStockActivity"
 			android:screenOrientation="portrait"
 			android:theme="@android:style/Theme.Dialog" />
+
+		<activity
+			android:name=".ui.activity.BLEDeviceListActivity"/>
 	</application>
 
 </manifest>

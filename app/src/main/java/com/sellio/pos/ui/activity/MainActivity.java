@@ -133,9 +133,10 @@ public class MainActivity extends BaseFragmentActivity {
 
 		initiateActionBar();
 
-		FragmentManager fragmentManager = getSupportFragmentManager();
 		pref = getSharedPreferences(KeyForData, Context.MODE_PRIVATE);
 		pd = pref.edit();
+
+		FragmentManager fragmentManager = getSupportFragmentManager();
 		pagerAdapter = new PagerAdapter(fragmentManager, getResources());
 		viewPager.setAdapter(pagerAdapter);
 		viewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {

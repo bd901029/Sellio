@@ -1,6 +1,8 @@
 package com.sellio.pos.ui.activity;
 
 import android.app.ActionBar;
+import android.bluetooth.BluetoothSocket;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -15,9 +17,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.sellio.pos.R;
+import com.sellio.pos.engine.ble.BluetoothPrinterManager;
 import com.sellio.pos.engine.db.Cart;
 import com.sellio.pos.engine.db.Sale;
 import com.sellio.pos.engine.Utility;
+
+import java.io.IOException;
+import java.io.OutputStream;
 
 /**
  * UI for showing the detail of Sale in the record.
@@ -33,6 +39,8 @@ public class SaleDetailActivity extends BaseActivity {
 
 	CartListViewAdapter cartListViewAdapter = new CartListViewAdapter();
 	private ListView cartListView;
+
+	private static BluetoothSocket bleSocket;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -62,10 +70,29 @@ public class SaleDetailActivity extends BaseActivity {
 	}
 
 	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		if (requestCode == BLEDeviceListActivity.REQUEST_CONNECT_BT) {
+			try {
+				bleSocket = BLEDeviceListActivity.getSocket();
+				if (bleSocket != null) {
+					print();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	@Override
 	protected void onResume() {
 		super.onResume();
 
 		update();
+	}
+
+	public void onPrintBtnClicked(View view) {
+		print();
 	}
 
 	private void initUI() {
@@ -133,5 +160,17 @@ public class SaleDetailActivity extends BaseActivity {
 
 			return convertView;
 		}
+	}
+
+	void print() {
+		if (bleSocket == null){
+			Intent bleIntent = new Intent(getApplicationContext(), BLEDeviceListActivity.class);
+			this.startActivityForResult(bleIntent, BLEDeviceListActivity.REQUEST_CONNECT_BT);
+			return;
+		}
+
+		BluetoothPrinterManager bleManager = BluetoothPrinterManager.sharedInstance();
+		bleManager.initialize(bleSocket);
+		bleManager.printSale(sale);
 	}
 }

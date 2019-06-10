@@ -74,17 +74,16 @@ public class LoginActivity extends BaseActivity {
 		User.sharedInstance().login(username, password, new ApiManager.Callback() {
 			@Override
 			public void OnSuccess() {
-				hideProgress();
-
 				Intent intent = new Intent(LoginActivity.this, MainActivity.class);
 				startActivity(intent);
+
+				hideProgress();
 			}
 
 			@Override
 			public void OnFailure(String message) {
 				hideProgress();
-
-				showErrorMessage(message);
+				showErrorToast(message);
 			}
 		});
 	}

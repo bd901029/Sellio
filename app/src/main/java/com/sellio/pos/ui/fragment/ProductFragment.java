@@ -123,8 +123,8 @@ public class ProductFragment extends UpdatableFragment {
 	}
 
     public void OnAddProductBtnClicked() {
-    	if (!User.sharedInstance().isAdmin())
-    		return;
+//    	if (!User.sharedInstance().isAdmin())
+//    		return;
 
         AddProductDialogFragment newFragment = new AddProductDialogFragment(ProductFragment.this);
         newFragment.show(getFragmentManager(), "");
